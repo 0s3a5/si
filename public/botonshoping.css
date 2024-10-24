@@ -1,0 +1,97 @@
+.codepen-button {
+  font-family: monospace;
+  font-weight: bolder;
+  display: block;
+  cursor: pointer;
+  color: #000;
+  margin: 0 auto;
+  position: relative;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 6px;
+  overflow: hidden;
+  padding: 3px;
+  width: 130px;
+  isolation: isolate;
+  -webkit-transform: scale(0.85);
+  -ms-transform: scale(0.85);
+  transform: scale(0.85);
+}
+
+.codepen-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 420%;
+  height: 120%;
+  background: linear-gradient(
+    115deg,
+    #628fbc,
+    hsl(0, 93%, 73%),
+    #f032a7,
+    #329af0,
+    #f032a7
+  );
+  background-size: 25% 100%;
+  -webkit-animation: border-animation 0.75s linear infinite;
+  animation: border-animation 0.75s linear infinite;
+  -webkit-animation-play-state: paused;
+  animation-play-state: paused;
+  translate: -5% 0%;
+  -webkit-transition: translate 0.25s ease-out;
+  transition: translate 0.25s ease-out;
+}
+
+.codepen-button:hover::before {
+  -webkit-animation-play-state: running;
+  animation-play-state: running;
+  -webkit-transition-duration: 0.75s;
+  transition-duration: 0.75s;
+  translate: 0% 0%;
+}
+
+@-webkit-keyframes border-animation {
+  to {
+    -webkit-transform: translateX(-25%);
+    transform: translateX(-25%);
+  }
+}
+
+@keyframes border-animation {
+  to {
+    -webkit-transform: translateX(-25%);
+    transform: translateX(-25%);
+  }
+}
+
+.codepen-button span {
+  position: relative;
+  display: block;
+  padding: 1rem 1.5rem;
+  font-size: 1.1rem;
+  background: #fff;
+  border-radius: 3px;
+  height: 100%;
+}
+
+.codepen-button .span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: start;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.codepen-button .p {
+  margin: 0;
+}
