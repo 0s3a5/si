@@ -1,0 +1,14 @@
+.container {
+  /* Dimensiones básicas y centrado */
+  width: 100%;
+  height: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+
+  /* Color sólido sin líneas ni animación */
+  background-color: #00CED1; /* Fondo de color turquesa */
+}

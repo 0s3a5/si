@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>pagina principal</title>
+    <link href="/style.css" rel="stylesheet" type="text/css" />
+    <link href="/fondo.css" rel="stylesheet" type="text/css" />
+    <link href="/agregaralcarrito.css" rel="stylesheet" type="text/css" />
+    <link href="/imagenesarmas.css" rel="stylesheet" type="text/css" />
+    <link href="/botonwallet.css" rel="stylesheet" type="text/css" />
+    
+    
+    <style>
+    
+
+    </style>
+  
+
+
+
+</head>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+
+
+ <body class="wallpaper">
+   
+    <div id="miDiv"></div>
+    <script> //compara ancho y alto de la pantalla
+        let dvh = window.innerHeight;
+        let dvw = window.innerWidth;
+        if (dvh > dvw) {
+            document.getElementById('miDiv').style.height = '27%';
+        } else {
+            document.getElementById('miDiv').style.height = '20%';
+        }
+    </script>
+   
+    
+    
+
+    <div style="height: 3vh;"></div>
+
+
+
+
+
+    <div style="display: flex; justify-content: space-between; padding: 0 10%;">
+        <a href="#Hollow-Knigth" style="display: block; width: 45%;">
+            <img src="imagenes/logo1.png" style="width: 100%; height: auto;">
+        </a>
+        <a href="#Chainsaw-man" style="display: block; width: 45%;">
+            <img src="imagenes/logo2.png" style="width: 100%; height: auto;">
+        </a>
+    </div>
+    <div style="display: flex; justify-content: space-between; padding: 0 10%;">
+        <a href="#Hibike" style="display: block; width: 45%;">
+            <img src="imagenes/logo3.png" style="width: 100%; height: auto;">
+        </a>
+        <a href="#Kirby" style="display: block; width: 45%;">
+            <img src="imagenes/logo4.png" style="width: 100%; height: auto;">
+        </a>
+    </div>
+   
+
+  <section id="Hollow-Knigth">
+        <div class="contenido-principal">
+            <div class="cuadro-productos" id="cuadro-productos">
+<div class="container my-5">
+  <div class="row">
+    {{#each lista}}
+    <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
+      <div class="tarjeta-producto">
+          <div class="tarjeta-contenido">
+            <div class="frontal">
+              <img src="{{{this.link_imagen}}}" alt="Producto" class="img-fluid">
+              <div class="nombre">{{this.nombre}}</div>
+            </div>
+            <div class="trasera">
+              <div class="descripcion">
+                Precio: ${{this.precio}} USD<br>{{this.datof}}<br>{{this.datos}}
+              </div>
+              <a class="btn" href="/login" style="margin-right: 5vw;">comprar</a>
+        </li>
+            </div>
+          </div>
+      </div>
+    </div>
+    {{/each}}
+  </div>
+</div>
+
+
+
+    
+<!-- Contenido adicional fuera del loop -->
+
+<div style="width: 70%; margin: 0 auto; text-align: center;">
+    <img src="imagenes/picmix.com_11789738.gif" style="width: 80%; height: auto;">
+</div>
+
+
+    <div style="height: 65%;"></div> <!-- separador -->
+
+
+
+
+
+
+
+  
+</body>
+
+</html>
